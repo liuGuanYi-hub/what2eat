@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "What2Eat",
+    "subtitle": "Random meal decision full-stack web app",
+    "output": "dynamic-archify-architecture.html"
+  },
+  "components": [
+    {
+      "id": "user",
+      "type": "external",
+      "label": "Diner",
+      "sublabel": "Browser",
+      "pos": [
+        20,
+        250
+      ],
+      "size": [
+        140,
+        64
+      ]
+    },
+    {
+      "id": "frontend",
+      "type": "frontend",
+      "label": "Vue Frontend",
+      "sublabel": "Menu + random box",
+      "pos": [
+        260,
+        250
+      ],
+      "size": [
+        170,
+        64
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "Spring Boot API",
+      "sublabel": "Dish services",
+      "pos": [
+        520,
+        250
+      ],
+      "size": [
+        170,
+        64
+      ]
+    },
+    {
+      "id": "db",
+      "type": "database",
+      "label": "MySQL",
+      "sublabel": "Dish basket",
+      "pos": [
+        800,
+        250
+      ],
+      "size": [
+        160,
+        64
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "What2Eat application",
+      "wraps": [
+        "frontend",
+        "api",
+        "db"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "user",
+      "to": "frontend",
+      "label": "choose",
+      "variant": "emphasis"
+    },
+    {
+      "from": "frontend",
+      "to": "api",
+      "label": "REST",
+      "variant": "emphasis"
+    },
+    {
+      "from": "api",
+      "to": "db",
+      "label": "dishes"
+    }
+  ],
+  "cards": []
+}

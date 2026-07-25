@@ -34,3 +34,11 @@ What2Eat 是一个轻量级的全栈 Web 应用，旨在帮助有选择困难症
 ```bash
 git clone [https://github.com/liuGuanYi-hub/what2eat.git](https://github.com/liuGuanYi-hub/what2eat.git)
 cd what2eat
+```
+
+## 动态系统架构图
+
+![What2Eat 动态系统架构图](docs/architecture/dynamic-archify-architecture.svg)
+
+- [打开交互式动态架构图](docs/architecture/dynamic-archify-architecture.html)
+- [查看架构源数据](docs/architecture/dynamic-archify-architecture.json)
